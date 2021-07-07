@@ -1,0 +1,21 @@
+<div class="login-box">
+
+  <div class="row" *ngFor="let post of posts | async">
+    <div class="blogpost" style=" color: whitesmoke !important; margin-left: 25%;" >
+      <h3><a style=" color: whitesmoke !important; margin-left: 25%;" href="/post/{{post.id}}"
+          class="blog-title">{{post.title}}</a></h3>
+      <div>
+        <i class="fas fa-user"></i> User Name: {{post.username}}
+      </div>
+
+
+      <p [innerHTML]="post.content"></p>
+
+      <div>
+        <a type="button" href="/post/{{post.id}}" class="read-more btn btn-default"
+          style="color:whitesmoke !important">Read More</a>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>

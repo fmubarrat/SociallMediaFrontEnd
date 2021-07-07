@@ -1,0 +1,39 @@
+<div class="login-box">
+  <h2> Shout out your Thoughts! </h2>
+  <form action="" class="form" [formGroup]="addPostForm" (ngSubmit)="addPost()" novalidate>
+
+    <div class="user-box">
+      <input class="input" type="text" id="title" [formControlName]="'title'" required="required"
+        placeholder="Post Title">
+      <label class="label" for=""> </label>
+    </div>
+    <!-- /.user-box -->
+
+    <div>
+
+      <input class="input" type="text" id="title" [formControlName]="'body'" required="required"
+        placeholder="Post your status">
+      <label class="label" for=""> </label>
+    </div>
+
+    <div>
+      <select [formControlName]="'location'" required="required"> 
+        <option value="Dhaka" [selected]="'Dhaka'">Dhaka</option>  
+        <option value="Shylhet" [selected]="'Shylhet'">Shylhet</option>  
+      </select>
+                               
+     
+    </div>
+
+
+    <!-- /.user-box -->
+    <a class="button" style="margin-left: 34%;" href="#" type="submit">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Post</button>
+    </a>
+  </form>
+  <!-- /form -->
+</div>
